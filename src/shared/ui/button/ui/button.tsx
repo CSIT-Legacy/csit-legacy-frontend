@@ -8,16 +8,8 @@ export function Button(props: ButtonProps) {
 		<button
 			className={`
         ${styles.button}
-        ${styles[props.variant!] ?? styles.default}
-        ${
-					props.size === 'sm'
-						? styles.sm
-						: props.size === 'lg'
-							? styles.lg
-							: props.size === 'icon'
-								? styles.icon
-								: styles.md
-				}
+        ${styles[props.variant ?? 'default']}
+        ${styles[props.size ?? 'md']}
       `}
 			disabled={props.disabled}
 			onClick={props.onClick ?? (() => {})}>
