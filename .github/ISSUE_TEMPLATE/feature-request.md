@@ -3,7 +3,7 @@ name: Предложить улучшение
 about: Есть какая-то идея для проекта?
 title: '[FEAT]: '
 labels: feature
-assignees: tolstovrob
+assignees:
 ---
 
 **Проблема**
