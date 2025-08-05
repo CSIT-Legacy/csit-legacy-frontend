@@ -11,18 +11,18 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	size?: 'md' | 'sm' | 'lg' | 'icon';
 }
 
-export function Button(props: ButtonProps) {
+export function Button({ onClick, children, disabled, variant, size, ...props }: ButtonProps) {
 	return (
 		<button
 			className={`
         ${styles.button}
-        ${styles[props.variant ?? 'default']}
-        ${styles[props.size ?? 'md']}
+        ${styles[variant ?? 'default']}
+        ${styles[size ?? 'md']}
       `}
-			disabled={props.disabled}
-			onClick={props.onClick ?? (() => {})}
+			disabled={disabled}
+			onClick={onClick ?? (() => {})}
 			{...props}>
-			{props.children}
+			{children}
 		</button>
 	);
 }
