@@ -58,7 +58,7 @@ $sizes: (
 	gap: 0.25rem;
 	font-family: inherit;
 	cursor: pointer;
-	border: solid;
+	border-style: solid;
 
 	&:not(:disabled):active {
 		scale: 0.95;
