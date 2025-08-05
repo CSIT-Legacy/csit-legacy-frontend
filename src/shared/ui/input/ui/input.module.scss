@@ -1,0 +1,48 @@
+@use '@/shared/ui/colors.scss' as *;
+
+@mixin variant($variant) {
+	$variant-map: map-get($variants, $variant);
+
+	&.#{$variant} {
+		background-color: map-get($variant-map, bg-color);
+		color: map-get($variant-map, fg-color);
+		border-color: map-get($variant-map, bd-color);
+
+		&:focus {
+			background-color: map-get($variant-map, hover-bg-color);
+			color: map-get($variant-map, hover-fg-color);
+			border-color: map-get($variant-map, hover-bd-color);
+		}
+
+		&:disabled {
+			background-color: map-get($variant-map, disabled-bg-color) !important;
+			color: map-get($variant-map, disabled-fg-color) !important;
+			border-color: map-get($variant-map, disabled-bd-color) !important;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.input {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.25rem;
+	font-family: inherit;
+	cursor: text;
+	border-style: solid;
+	border-width: 2px;
+	padding: 0.25rem 0.5rem;
+	font-size: 1rem;
+
+	&:focus {
+		outline: none;
+	}
+
+	@include variant('default');
+	@include variant('primary');
+	@include variant('error');
+	@include variant('success');
+	@include variant('info');
+	@include variant('warning');
+}
