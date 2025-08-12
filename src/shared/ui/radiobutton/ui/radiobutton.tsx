@@ -1,0 +1,32 @@
+'use client';
+
+import { InputHTMLAttributes, MouseEventHandler, ReactNode } from 'react';
+import styles from './radiobutton.module.scss';
+
+export interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> {
+	onClick?: MouseEventHandler<HTMLInputElement>;
+	children?: ReactNode;
+	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
+}
+
+export function RadioButton({ onClick, children, variant, ...props }: RadioButtonProps) {
+	return (
+		<label
+			htmlFor='radio-button'
+			suppressHydrationWarning
+			className={`${styles.label}
+					${styles[variant ?? 'default']}
+			`}>
+			<input
+				className={`
+					${styles.radiobutton}
+					${styles[variant ?? 'default']}
+				`}
+				type='radio'
+				onClick={onClick}
+				{...props}
+			/>
+			{children}
+		</label>
+	);
+}

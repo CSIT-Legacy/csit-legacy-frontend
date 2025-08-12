@@ -1,0 +1,71 @@
+@use '@/shared/ui/colors.scss' as *;
+
+@mixin variant($variant) {
+	$variant-map: map-get($variants, $variant);
+
+	&.#{$variant} {
+		background-color: map-get($variant-map, bg-color);
+
+		&:hover {
+			background-color: map-get($variant-map, hover-bg-color);
+		}
+
+		&:checked::after {
+			background-color: map-get($variant-map, hover-bg-color);
+		}
+
+		&:disabled {
+			background-color: map-get($variant-map, bg-color);
+		}
+	}
+}
+
+.radiobutton {
+	appearance: none;
+	background-size: cover;
+	background-repeat: repeat;
+
+	background-image: url('../assets/radio-button.svg');
+	margin-bottom: -0.5;
+	width: 1.1em;
+	height: 1.1em;
+	align-items: center;
+	gap: 0.2rem;
+	cursor: pointer;
+	padding: 0.2rem 0.2rem;
+
+	&::after {
+		background-image: url('../assets/radio-button.svg');
+	}
+
+	@include variant('default');
+	@include variant('primary');
+	@include variant('error');
+	@include variant('success');
+	@include variant('info');
+	@include variant('warning');
+}
+
+@mixin variant-label($variant) {
+	$variant-map: map-get($variants, $variant);
+
+	&.#{$variant} {
+		color: map-get($variant-map, fg-color);
+
+		&:disabled {
+			color: map-get($variant-map, disabled-fg-color) !important;
+		}
+	}
+}
+
+.label {
+	font-family: inherit;
+	padding: 0.25rem 0.25rem;
+
+	@include variant-label('default');
+	@include variant-label('primary');
+	@include variant-label('error');
+	@include variant-label('success');
+	@include variant-label('info');
+	@include variant-label('warning');
+}
