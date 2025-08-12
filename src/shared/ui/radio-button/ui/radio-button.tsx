@@ -19,7 +19,7 @@ export function RadioButton({ onClick, children, variant, ...props }: RadioButto
 			`}>
 			<input
 				className={`
-					${styles.radiobutton}
+					${styles['radio-button']}
 					${styles[variant ?? 'default']}
 				`}
 				type='radio'
