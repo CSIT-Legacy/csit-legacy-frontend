@@ -1,5 +1,5 @@
 import { Button } from '@/shared/ui/button';
-import { RadioButton } from '@/shared/ui/radiobutton';
+import { RadioButton } from '@/shared/ui/radio-button';
 
 export function Page() {
 	return (

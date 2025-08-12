@@ -1,7 +1,7 @@
 'use client';
 
 import { InputHTMLAttributes, MouseEventHandler, ReactNode } from 'react';
-import styles from './radiobutton.module.scss';
+import styles from './radio-button.module.scss';
 
 export interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> {
 	onClick?: MouseEventHandler<HTMLInputElement>;
