@@ -4,21 +4,22 @@
 	$variant-map: map-get($variants, $variant);
 
 	&.#{$variant} {
+		filter: invert(1) map-get($variant-map, filter-bd-color);
+
 		&::after {
-			stroke: map-get($variant-map, bg-color);
-			stroke-width: 2px;
+			filter: invert(1) map-get($variant-map, filter-bd-color);
 		}
 
 		&:hover {
-			stroke: map-get($variant-map, hover-bg-color);
+			filter: invert(1) map-get($variant-map, filter-bd-color);
 		}
 
 		&:checked {
-			stroke: map-get($variant-map, hover-bg-color);
+			filter: invert(1) map-get($variant-map, filter-bd-color);
 		}
 
 		&:disabled {
-			stroke: map-get($variant-map, bg-color);
+			filter: invert(1) map-get($variant-map, filter-bd-color);
 		}
 	}
 }
