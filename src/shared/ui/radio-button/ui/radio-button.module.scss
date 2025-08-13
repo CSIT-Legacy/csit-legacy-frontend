@@ -5,22 +5,6 @@
 
 	&.#{$variant} {
 		filter: invert(1) map-get($variant-map, filter-bd-color);
-
-		&::after {
-			filter: invert(1) map-get($variant-map, filter-bd-color);
-		}
-
-		&:hover {
-			filter: invert(1) map-get($variant-map, filter-bd-color);
-		}
-
-		&:checked {
-			filter: invert(1) map-get($variant-map, filter-bd-color);
-		}
-
-		&:disabled {
-			filter: invert(1) map-get($variant-map, filter-bd-color);
-		}
 	}
 }
 
