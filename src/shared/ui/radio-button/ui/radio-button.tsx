@@ -1,15 +1,15 @@
 'use client';
 
-import { InputHTMLAttributes, MouseEventHandler, ReactNode } from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 import styles from './radio-button.module.scss';
 
 export interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> {
-	onClick?: MouseEventHandler<HTMLInputElement>;
+	checked?: boolean;
 	children?: ReactNode;
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
 }
 
-export function RadioButton({ onClick, children, variant, ...props }: RadioButtonProps) {
+export function RadioButton({ checked, children, variant, ...props }: RadioButtonProps) {
 	return (
 		<label
 			htmlFor='radio-button'
@@ -23,7 +23,6 @@ export function RadioButton({ onClick, children, variant, ...props }: RadioButto
 					${styles[variant ?? 'default']}
 				`}
 				type='radio'
-				onClick={onClick}
 				{...props}
 			/>
 			{children}
