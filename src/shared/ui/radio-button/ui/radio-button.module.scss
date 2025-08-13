@@ -22,7 +22,7 @@
 	padding: 0.25rem 0.25rem;
 
 	&:checked {
-		background-image: url(../assets/radio-button-enabled.svg);
+		background-image: url('../assets/radio-button-checked.svg');
 	}
 
 	@include variant-button('default');
