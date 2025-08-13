@@ -12,8 +12,6 @@ export interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> 
 export function RadioButton({ checked, children, variant, ...props }: RadioButtonProps) {
 	return (
 		<label
-			htmlFor='radio-button'
-			suppressHydrationWarning
 			className={`${styles.label}
 					${styles[variant ?? 'default']}
 			`}>
