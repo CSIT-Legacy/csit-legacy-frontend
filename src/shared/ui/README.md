@@ -25,5 +25,5 @@
 | Свойство  | Допустимые значения                                                     | Значения по умолчанию  | Описание свойства           |
 | --------- | ----------------------------------------------------------------------- | ---------------------- | --------------------------- |
 | `variant` | `'default' \| 'primary' \| 'error' \| 'success' \| 'info' \| 'warning'` | `'default'`            | Цветовой вариант компонента |
-| `checked` | `boolean \| undefined`                                                  | `undefined` (=`false`) | Активность кнопки           |
-| `label`   | `string \| undefined`                                                   | `undefined`            | Название название варианта  |
+| `checked` | `boolean \| undefined`                                                  | `undefined` (=`false`) | Состояние                   |
+| `label`   | `string \| undefined`                                                   | `undefined`            | Метка                       |
