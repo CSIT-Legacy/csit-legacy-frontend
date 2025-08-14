@@ -13,10 +13,7 @@ export function RadioButton({ checked, label, variant, ...props }: RadioButtonPr
 	return (
 		<label className={`${styles.label} ${styles[variant ?? 'default']}`}>
 			<input
-				className={`
-					${styles['radio-button']}
-					${styles[variant ?? 'default']}
-				`}
+				className={`${styles['radio-button']} ${styles[variant ?? 'default']}`}
 				type='radio'
 				checked={checked}
 				{...props}
