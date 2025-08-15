@@ -25,9 +25,9 @@
      inkscape:document-units="mm"
      inkscape:lockguides="false"
      showguides="true"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="875.04464"
-     inkscape:cy="202.58609"
+     inkscape:zoom="1"
+     inkscape:cx="332.49999"
+     inkscape:cy="408.49999"
      inkscape:window-width="2536"
      inkscape:window-height="1386"
      inkscape:window-x="0"
@@ -74,7 +74,7 @@
      style="display:inline;opacity:1;mix-blend-mode:normal">
     <path
        style="fill:#ffffff;stroke-width:0;stroke-dasharray:none"
-       d="M 119.9074,0 H 80.026457 V 10.05291 H 49.933869 v 9.986772 h -9.92064 v 9.986773 H 29.960325 v 9.920635 h -9.92064 v 9.986773 H 9.9867718 V 79.960317 H 0 v 40.013223 h 9.9867718 v 29.96032 h 9.9206402 v 10.05291 h 10.052913 v 9.98678 h 9.986772 v 10.05291 h 9.986772 v 9.92063 H 79.960315 V 200 h 40.013225 v -10.05291 h 29.96032 v -9.98677 h 10.05291 v -9.98677 h 9.98677 v -10.05292 h 9.98678 V 150 h 9.98677 V 119.97354 H 200 V 80.026454 h -9.98677 V 49.983466 H 179.96032 V 39.94709 h -9.98678 v -9.958185 h -9.99765 v -9.996303 h -9.9963 v -9.984609 h -30.0847 l 0.10749,19.969218 H 139.9716 V 40.03197 h 20.01598 v 19.954802 h 10.01903 v 20.007022 h 9.99696 v 40.045896 h -9.96388 v 19.84127 h -10.11906 v 20.03967 h -19.97354 v 10.05292 h -19.97355 v 10.05291 H 79.960315 V 169.97355 H 60.052914 V 159.92063 H 40.013229 v -19.9074 H 30.026457 V 119.90885 H 19.969224 V 80.017177 H 30.023977 V 59.954423 h 9.961225 V 40.03197 H 59.954426 V 29.977211 h 20.039375 v -9.961226 h 39.968649 z"
+       d="M 120,0 H 80.026457 L 80,10.05291 50,10 V 20 H 40 V 30 H 30 V 40 H 20 V 50 H 10 V 80 H 0 v 40 h 10 v 30 h 10 v 10 h 10 v 10 h 10 v 10 h 10 v 10 h 30 v 10 h 40 v -10 h 30 v -10 h 10 v -10 h 10 v -10 h 10 l 0,-10 h 10 v -30 h 10 V 80 h -9.98677 L 190,50 H 180 V 40 H 170 V 30 H 160 V 20 H 150 V 10 H 119.89489 L 120,30 l 20,0 v 10 h 20 v 20 h 10 v 20 h 10 v 40 h -10 v 20 h -10 v 20 h -20 v 10 h -20 v 10 H 80 V 170 H 60 V 160 H 40 V 140 H 30 V 120 H 20 V 80 l 10.023977,0.01718 V 59.954423 L 40,60 V 40 H 60 V 30 H 80 V 20 h 40 z"
        id="path5"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
   </g>
