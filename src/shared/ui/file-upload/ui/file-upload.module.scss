@@ -1,0 +1,64 @@
+@use '@/shared/ui/colors.scss' as *;
+
+@mixin variant($variant) {
+	$variant-map: map-get($variants, $variant);
+
+	&.#{$variant} {
+		background-color: map-get($variant-map, bg-color);
+		color: map-get($variant-map, fg-color);
+		border-color: map-get($variant-map, bd-color);
+
+		&:focus {
+			background-color: map-get($variant-map, hover-bg-color);
+			color: map-get($variant-map, hover-fg-color);
+			border-color: map-get($variant-map, hover-bd-color);
+		}
+
+		&:disabled {
+			background-color: map-get($variant-map, disabled-bg-color) !important;
+			color: map-get($variant-map, disabled-fg-color) !important;
+			border-color: map-get($variant-map, disabled-bd-color) !important;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.container {
+	display: flex;
+	width: 5rem;
+	height: 5rem;
+	cursor: pointer;
+}
+
+.dropZone {
+	padding: 2.5rem;
+	border: 2px dashed;
+	font-size: 2.25em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include variant('default');
+	@include variant('primary');
+	@include variant('error');
+	@include variant('success');
+	@include variant('info');
+	@include variant('warning');
+}
+
+.label {
+	font-family: inherit;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.image {
+	width: 1rem;
+	height: 1rem;
+}
+
+.file-upload {
+	display: none;
+}
