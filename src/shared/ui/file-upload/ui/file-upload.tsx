@@ -24,6 +24,13 @@ export function FileUpload({ variant, label }: FileUploadProps) {
 		event.preventDefault();
 	};
 
+	const handleFileDrop = (event: React.DragEvent<HTMLDivElement>) => {
+		event.preventDefault();
+		if (event.dataTransfer.files) {
+			setFile(event.dataTransfer.files);
+		}
+	};
+
 	const handleUploadClick = () => {
 		fileInputRef.current?.click();
 	};
@@ -33,6 +40,7 @@ export function FileUpload({ variant, label }: FileUploadProps) {
 			<div
 				className={`${styles.dropZone} ${styles[variant ?? 'default']}`}
 				onDragOver={handleDragOver}
+				onDrop={handleFileDrop}
 				onClick={handleUploadClick}>
 				{file ? (
 					<label className={`${styles.label}`}>
