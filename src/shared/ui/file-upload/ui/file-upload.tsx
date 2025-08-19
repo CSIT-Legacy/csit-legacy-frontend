@@ -1,6 +1,6 @@
 'use client';
 
-import { InputHTMLAttributes, useState, useRef, ChangeEvent } from 'react';
+import React, { InputHTMLAttributes, useState, useRef, ChangeEvent } from 'react';
 import styles from './file-upload.module.scss';
 import DownloadIcon from '../assets/download.svg';
 import FileDownloadedIcon from '../assets/file-downloaded.svg';
@@ -14,10 +14,14 @@ export function FileUpload({ variant, label }: FileUploadProps) {
 	const [file, setFile] = useState<FileList | null>(null);
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
-	const updateImage = (e: ChangeEvent<HTMLInputElement>) => {
-		if (e.target.files) {
-			setFile(e.target.files);
+	const updateImage = (event: ChangeEvent<HTMLInputElement>) => {
+		if (event.target.files) {
+			setFile(event.target.files);
 		}
+	};
+
+	const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+		event.preventDefault();
 	};
 
 	const handleUploadClick = () => {
@@ -28,6 +32,7 @@ export function FileUpload({ variant, label }: FileUploadProps) {
 		<div className={styles.container}>
 			<div
 				className={`${styles.dropZone} ${styles[variant ?? 'default']}`}
+				onDragOver={handleDragOver}
 				onClick={handleUploadClick}>
 				{file ? (
 					<label className={`${styles.label}`}>
