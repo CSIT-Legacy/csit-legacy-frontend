@@ -8,7 +8,6 @@ import FileUploadedIcon from '../assets/file-uploaded.svg';
 
 export interface FileUploadProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
-	accept?: string;
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
 }
 
