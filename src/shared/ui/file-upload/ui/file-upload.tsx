@@ -50,6 +50,8 @@ export function FileUpload({ variant, label, ...props }: FileUploadProps) {
 							className={`${styles.image}`}
 							src={FileUploadedIcon.src}
 							alt='file uploaded'
+							width='1'
+							height='1'
 						/>
 						{file[0].name}
 					</label>
@@ -59,6 +61,8 @@ export function FileUpload({ variant, label, ...props }: FileUploadProps) {
 							className={`${styles.image}`}
 							src={UploadIcon.src}
 							alt='upload'
+							width='1'
+							height='1'
 						/>
 						{label}
 					</label>
