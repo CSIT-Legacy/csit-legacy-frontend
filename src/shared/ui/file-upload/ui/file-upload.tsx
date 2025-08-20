@@ -3,8 +3,8 @@
 import { InputHTMLAttributes, useState, useRef, ChangeEvent } from 'react';
 import Image from 'next/image';
 import styles from './file-upload.module.scss';
-import DownloadIcon from '../assets/download.svg';
-import FileDownloadedIcon from '../assets/file-downloaded.svg';
+import UploadIcon from '../assets/upload.svg';
+import FileUploadedIcon from '../assets/file-uploaded.svg';
 
 export interface FileUploadProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
@@ -48,8 +48,8 @@ export function FileUpload({ variant, label, ...props }: FileUploadProps) {
 					<label className={`${styles.label}`}>
 						<Image
 							className={`${styles.image}`}
-							src={FileDownloadedIcon.src}
-							alt='file downloaded'
+							src={FileUploadedIcon.src}
+							alt='file uploaded'
 						/>
 						{file[0].name}
 					</label>
@@ -57,8 +57,8 @@ export function FileUpload({ variant, label, ...props }: FileUploadProps) {
 					<label className={`${styles.label}`}>
 						<Image
 							className={`${styles.image}`}
-							src={DownloadIcon.src}
-							alt='downloaded'
+							src={UploadIcon.src}
+							alt='upload'
 						/>
 						{label}
 					</label>
