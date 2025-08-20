@@ -29,7 +29,7 @@
 	cursor: pointer;
 }
 
-.dropZone {
+.drop-zone {
 	padding: 0.25rem 2.5rem;
 	border: 2px dashed;
 	font-size: 1em;
@@ -37,6 +37,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	&:hover {
+		scale: 0.95;
+	}
 
 	@include variant('default');
 	@include variant('primary');
@@ -51,6 +55,7 @@
 	cursor: pointer;
 	display: flex;
 	align-items: center;
+	gap: 0.25rem;
 }
 
 .image {

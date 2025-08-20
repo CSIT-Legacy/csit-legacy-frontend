@@ -40,7 +40,7 @@ export function FileUpload({ variant, label, ...props }: FileUploadProps) {
 	return (
 		<div className={styles.container}>
 			<div
-				className={`${styles.dropZone} ${styles[variant ?? 'default']}`}
+				className={`${styles['drop-zone']} ${styles[variant ?? 'default']}`}
 				onDragOver={handleDragOver}
 				onDrop={handleFileDrop}
 				onClick={handleUploadClick}>
