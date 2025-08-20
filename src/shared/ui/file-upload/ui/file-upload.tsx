@@ -1,16 +1,18 @@
 'use client';
 
-import React, { InputHTMLAttributes, useState, useRef, ChangeEvent } from 'react';
+import { InputHTMLAttributes, useState, useRef, ChangeEvent } from 'react';
+import Image from 'next/image';
 import styles from './file-upload.module.scss';
 import DownloadIcon from '../assets/download.svg';
 import FileDownloadedIcon from '../assets/file-downloaded.svg';
 
 export interface FileUploadProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
+	accept?: string;
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
 }
 
-export function FileUpload({ variant, label }: FileUploadProps) {
+export function FileUpload({ variant, label, ...props }: FileUploadProps) {
 	const [file, setFile] = useState<FileList | null>(null);
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -44,17 +46,19 @@ export function FileUpload({ variant, label }: FileUploadProps) {
 				onClick={handleUploadClick}>
 				{file ? (
 					<label className={`${styles.label}`}>
-						<img
+						<Image
 							className={`${styles.image}`}
 							src={FileDownloadedIcon.src}
+							alt='file downloaded'
 						/>
 						{file[0].name}
 					</label>
 				) : (
 					<label className={`${styles.label}`}>
-						<img
+						<Image
 							className={`${styles.image}`}
 							src={DownloadIcon.src}
+							alt='downloaded'
 						/>
 						{label}
 					</label>
@@ -63,7 +67,7 @@ export function FileUpload({ variant, label }: FileUploadProps) {
 					ref={fileInputRef}
 					type='file'
 					className={`${styles['file-upload']}`}
-					accept='.pdf, .zip, .docx, .md, .pptx, .txt, .html, .rtf'
+					accept={props.accept}
 					onChange={updateImage}
 					multiple
 				/>
