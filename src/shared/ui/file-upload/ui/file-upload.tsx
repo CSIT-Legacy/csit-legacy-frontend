@@ -11,7 +11,7 @@ export interface FileUploadProps extends InputHTMLAttributes<HTMLInputElement> {
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
 }
 
-export function FileUpload({ variant, label, ...props }: FileUploadProps) {
+export function FileUpload({ variant, label }: FileUploadProps) {
 	const [file, setFile] = useState<FileList | null>(null);
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -70,9 +70,7 @@ export function FileUpload({ variant, label, ...props }: FileUploadProps) {
 					ref={fileInputRef}
 					type='file'
 					className={`${styles['file-upload']}`}
-					accept={props.accept}
 					onChange={updateImage}
-					multiple
 				/>
 			</div>
 		</div>
