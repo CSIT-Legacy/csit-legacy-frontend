@@ -48,6 +48,17 @@
 | `label`   | `string \| undefined`                                                   | `undefined`            | Метка                       |
 | `customClassName` | `string \| undefined`                                                | `undefined`            | Кастомный класс   |
 
+## FileUpload
+
+Удовлетворяет `InputHTMLAttributes<HTMLInputElement>`
+
+| Свойство  | Допустимые значения                                                     | Значения по умолчанию  | Описание свойства           |
+| --------- | ----------------------------------------------------------------------- | ---------------------- | --------------------------- |
+| `variant` | `'default' \| 'primary' \| 'error' \| 'success' \| 'info' \| 'warning'` | `'default'`            | Цветовой вариант компонента |
+| `label`   | `string \| undefined`                                                   | `undefined`            | Метка                       |
+| `customClassName` | `string \| undefined`                                           | `undefined`            | Кастомный класс             |
+
+
 
 ## Box
 
