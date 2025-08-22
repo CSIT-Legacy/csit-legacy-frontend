@@ -7,11 +7,12 @@ export interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> 
 	checked?: boolean;
 	label?: string;
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
+	customClassName?: string;
 }
 
-export function RadioButton({ checked, label, variant, ...props }: RadioButtonProps) {
+export function RadioButton({ checked, label, variant, customClassName, ...props }: RadioButtonProps) {
 	return (
-		<label className={`${styles.label} ${styles[variant ?? 'default']}`}>
+		<label className={`${styles.label} ${styles[variant ?? 'default']} ${customClassName ?? ''}`}>
 			<input
 				className={`${styles['radio-button']} ${styles[variant ?? 'default']}`}
 				type='radio'

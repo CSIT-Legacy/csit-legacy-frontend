@@ -9,9 +9,10 @@ import FileUploadedIcon from '../assets/file-uploaded.svg';
 export interface FileUploadProps extends InputHTMLAttributes<HTMLInputElement> {
 	label?: string;
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
+	customClassName?: string;
 }
 
-export function FileUpload({ variant, label }: FileUploadProps) {
+export function FileUpload({ variant, label, customClassName, ...props }: FileUploadProps) {
 	const [file, setFile] = useState<FileList | null>(null);
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -37,7 +38,7 @@ export function FileUpload({ variant, label }: FileUploadProps) {
 	};
 
 	return (
-		<div className={styles.container}>
+		<div className={`${styles.container} ${customClassName ?? ''}`}>
 			<div
 				className={`${styles['drop-zone']} ${styles[variant ?? 'default']}`}
 				onDragOver={handleDragOver}
@@ -71,6 +72,7 @@ export function FileUpload({ variant, label }: FileUploadProps) {
 					type='file'
 					className={`${styles['file-upload']}`}
 					onChange={updateImage}
+					{...props}
 				/>
 			</div>
 		</div>
