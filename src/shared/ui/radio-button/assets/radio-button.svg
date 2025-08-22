@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="radio-button.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:lockguides="false"
+     showguides="true"
+     inkscape:zoom="1"
+     inkscape:cx="332.49999"
+     inkscape:cy="408.49999"
+     inkscape:window-width="2536"
+     inkscape:window-height="1386"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999999"
+       spacingy="0.99999999"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="line_segment"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       end_type="open_both" />
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline;opacity:1;mix-blend-mode:normal">
+    <path
+       style="fill:#ffffff;stroke-width:0;stroke-dasharray:none"
+       d="M 120,0 H 80.026457 L 80,10.05291 50,10 V 20 H 40 V 30 H 30 V 40 H 20 V 50 H 10 V 80 H 0 v 40 h 10 v 30 h 10 v 10 h 10 v 10 h 10 v 10 h 10 v 10 h 30 v 10 h 40 v -10 h 30 v -10 h 10 v -10 h 10 v -10 h 10 l 0,-10 h 10 v -30 h 10 V 80 h -9.98677 L 190,50 H 180 V 40 H 170 V 30 H 160 V 20 H 150 V 10 H 119.89489 L 120,30 l 20,0 v 10 h 20 v 20 h 10 v 20 h 10 v 40 h -10 v 20 h -10 v 20 h -20 v 10 h -20 v 10 H 80 V 170 H 60 V 160 H 40 V 140 H 30 V 120 H 20 V 80 l 10.023977,0.01718 V 59.954423 L 40,60 V 40 H 60 V 30 H 80 V 20 h 40 z"
+       id="path5"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

@@ -1,3 +1,3 @@
 export function Page() {
-	return <div>Hello, World!</div>;
+	return <div></div>;
 }
