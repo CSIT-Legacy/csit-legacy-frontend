@@ -1,0 +1,29 @@
+@use '@/shared/ui/colors.scss' as *;
+
+@mixin variant($variant) {
+	$variant-map: map-get($variants, $variant);
+
+	&.#{$variant} {
+		background-color: map-get($variant-map, bg-color);
+		color: map-get($variant-map, fg-color);
+		border-color: map-get($variant-map, bd-color);
+  }
+}
+
+.box {
+  margin: 1rem;
+  position: relative;
+  width: fit-content;
+  padding: 1rem;
+  border: 2px solid currentColor;
+  // outline: .5rem solid black;  NOTE(tolstovrob): really wondering if it would be beautiful to add. See https://panr.github.io/hugo-theme-terminal-demo
+
+  & > label:first-child {
+    position: absolute;
+    font-size: .75rem;
+    background-color: black;
+    top: -1cap;
+    left: 1cap;
+    padding: 0 5px;
+  }
+}
