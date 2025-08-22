@@ -26,7 +26,6 @@
 	}
 
 	@include variant-button('default');
-	@include variant-button('primary');
 	@include variant-button('error');
 	@include variant-button('success');
 	@include variant-button('info');
@@ -53,7 +52,6 @@
 	gap: 0.25rem;
 
 	@include variant-label('default');
-	@include variant-label('primary');
 	@include variant-label('error');
 	@include variant-label('success');
 	@include variant-label('info');

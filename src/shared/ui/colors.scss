@@ -13,18 +13,6 @@ $variants: (
 		disabled-bd-color: #151515,
 		filter-bd-color: invert(97%) sepia(3%) saturate(208%) hue-rotate(357deg) brightness(95%) contrast(95%),
 	),
-	primary: (
-		bg-color: white,
-		fg-color: black,
-		bd-color: white,
-		hover-bd-color: white,
-		hover-fg-color: white,
-		hover-bg-color: #333,
-		disabled-bg-color: #999,
-		disabled-fg-color: black,
-		disabled-bd-color: #999,
-		filter-bd-color: invert(57%) sepia(16%) saturate(0%) hue-rotate(144deg) brightness(77%) contrast(72%),
-	),
 	error: (
 		bg-color: #400,
 		fg-color: red,

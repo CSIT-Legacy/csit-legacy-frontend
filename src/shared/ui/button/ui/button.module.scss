@@ -65,7 +65,6 @@ $sizes: (
 	}
 
 	@include variant('default');
-	@include variant('primary');
 	@include variant('error');
 	@include variant('success');
 	@include variant('info');
