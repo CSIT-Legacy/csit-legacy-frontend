@@ -1,5 +1,6 @@
 'use client';
 
+import { Box } from "@/shared/ui/box";
 import { Button } from "@/shared/ui/button";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { FileUpload } from "@/shared/ui/file-upload";
@@ -62,6 +63,13 @@ export function Page() {
 					/>
 				))}
 			</div>
+
+			<Box>
+				Aboba
+			</Box>
+			<Box name="fimoz">
+				Aboba
+			</Box>
 		</>
 	);
 }
