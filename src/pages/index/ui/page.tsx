@@ -11,6 +11,8 @@ const variants = ['default', 'error', 'success', 'info', 'warning'] as const;
 type VariantKey = typeof variants[number];
 
 export function Page() {
+	const state = useState<string>('');
+
 	return (
 		<>
 			<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '1rem', margin: '1rem' }}>
@@ -52,7 +54,7 @@ export function Page() {
 			<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '1rem', margin: '1rem' }}>
 				{variants.map((variant) => (
 					<Input
-						state={useState('aboba')}
+						state={state}
 						key={variant}
 						name='aboba'
 						placeholder={variant}
