@@ -1,0 +1,21 @@
+@use './vars.scss' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	font-size: $root-font-size;
+}
+
+body {
+	background-color: $default-bg-color;
+	color: $default-fg-color;
+	font-size: 1rem;
+}

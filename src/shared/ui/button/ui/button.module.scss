@@ -1,0 +1,81 @@
+@use '@/shared/ui/colors.scss' as *;
+
+$sizes: (
+	sm: (
+		font-size: 0.75rem,
+		padding: 0.25rem 0.5rem,
+		border: 1px,
+	),
+	md: (
+		font-size: 1rem,
+		padding: 0.25rem 1rem,
+		border: 2px,
+	),
+	lg: (
+		font-size: 1.5rem,
+		padding: 0.5rem 1rem,
+		border: 4px,
+	),
+);
+
+@mixin variant($variant) {
+	$variant-map: map-get($variants, $variant);
+
+	&.#{$variant} {
+		background-color: map-get($variant-map, bg-color);
+		color: map-get($variant-map, fg-color);
+		border-color: map-get($variant-map, bd-color);
+
+		&:hover {
+			background-color: map-get($variant-map, hover-bg-color);
+			color: map-get($variant-map, hover-fg-color);
+			border-color: map-get($variant-map, hover-bd-color);
+		}
+
+		&:disabled {
+			background-color: map-get($variant-map, disabled-bg-color) !important;
+			color: map-get($variant-map, disabled-fg-color) !important;
+			border-color: map-get($variant-map, disabled-bd-color) !important;
+			cursor: not-allowed;
+		}
+	}
+}
+
+@mixin size($size) {
+	$size-map: map-get($sizes, $size);
+
+	&.#{$size} {
+		font-size: map-get($size-map, font-size);
+		padding: map-get($size-map, padding);
+		border-width: map-get($size-map, border);
+	}
+}
+
+.button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.25rem;
+	font-family: inherit;
+	cursor: pointer;
+	border-style: solid;
+
+	&:not(:disabled):active {
+		scale: 0.95;
+	}
+
+	@include variant('default');
+	@include variant('error');
+	@include variant('success');
+	@include variant('info');
+	@include variant('warning');
+
+	@include size('sm');
+	@include size('md');
+	@include size('lg');
+
+	&.icon {
+		padding: 0.25rem;
+		aspect-ratio: 1 / 1;
+	}
+}
