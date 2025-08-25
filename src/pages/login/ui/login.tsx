@@ -35,7 +35,7 @@ export function LoginPage() {
 				<h1>CSIT Legacy</h1>
 				<Box
 					variant='default'
-					name='Войти'>
+					name='Вход'>
 					<div>Почта:</div>
 					<Input
 						state={email}
@@ -61,7 +61,7 @@ export function LoginPage() {
 						onClick={() => {
 							console.log('click');
 						}}>
-						Вход
+						Войти
 					</Button>
 					<Link
 						className={styles.link}
