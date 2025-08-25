@@ -7,22 +7,22 @@
 		background-color: map-get($variant-map, bg-color);
 		color: map-get($variant-map, fg-color);
 		border-color: map-get($variant-map, bd-color);
-  }
+	}
 }
 
 .box {
-  position: relative;
-  width: fit-content;
-  padding: 1rem;
-  border: 2px solid currentColor;
-  // outline: .5rem solid black;  NOTE(tolstovrob): really wondering if it would be beautiful to add. See https://panr.github.io/hugo-theme-terminal-demo
+	position: relative;
+	width: fit-content;
+	padding: 1rem;
+	border: 2px solid currentColor;
+	// outline: .5rem solid black;  NOTE(tolstovrob): really wondering if it would be beautiful to add. See https://panr.github.io/hugo-theme-terminal-demo
 
-  & > label:first-child {
-    position: absolute;
-    font-size: .75rem;
-    background-color: black;
-    top: -.5rem;
-    left: .25rem;
-    padding: 0 5px;
-  }
+	& > label:first-child {
+		position: absolute;
+		font-size: 0.75rem;
+		background-color: black;
+		top: -0.5rem;
+		left: 0.25rem;
+		padding: 0 5px;
+	}
 }

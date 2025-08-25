@@ -9,7 +9,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	disabled?: boolean;
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
 	size?: 'md' | 'sm' | 'lg' | 'icon';
-	customClassName?: string
+	customClassName?: string;
 }
 
 export function Button({ onClick, children, disabled, variant, size, customClassName, ...props }: ButtonProps) {
