@@ -12,43 +12,52 @@ export function LoginPage() {
 	const password = useState<string>('');
 
 	const [touchedEmail, setTouchedEmail] = useState<boolean>(false);
+	const [touchedPassword, setTouchedPassowrd] = useState<boolean>(false);
 
 	const validateEmail = (emailText: string) => {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		return emailRegex.test(emailText);
 	};
 
-	const isValidEmail = validateEmail(email[0]);
+	const validatePassword = (passwordText: string) => {
+		return passwordText.length >= 12;
+	};
 
-	const showError = touchedEmail && !isValidEmail;
+	const isValidEmail = validateEmail(email[0]);
+	const isValidPassword = validatePassword(password[0]);
+
+	const showEmailError = touchedEmail && !isValidEmail;
+	const showPasswordError = touchedPassword && !isValidPassword;
 
 	return (
 		<div className={styles.container}>
-			<form className={`${styles['login']}`}>
+			<form className={`${styles.login}`}>
 				<h1>CSIT Legacy</h1>
 				<Box
 					variant='default'
 					name='Войти'>
-					Почта:
+					<div>Почта:</div>
 					<Input
 						state={email}
 						name='login-email'
 						type='email'
 						placeholder='Почта'
 						onBlur={() => setTouchedEmail(true)}
-						variant={showError ? 'error' : 'default'}
+						variant={showEmailError ? 'error' : 'default'}
 					/>
-					Пароль:
+					<div>Пароль:</div>
 					<Input
 						state={password}
 						name='login-password'
 						type='password'
 						placeholder='Пароль'
-						variant='default'
+						onBlur={() => setTouchedPassowrd(true)}
+						variant={showPasswordError ? 'error' : 'default'}
 					/>
 					<Button
 						customClassName={styles.button}
 						variant='default'
+						disabled={showEmailError || showPasswordError}
 						onClick={() => {
 							console.log('click');
 						}}>
@@ -56,7 +65,7 @@ export function LoginPage() {
 					</Button>
 					<Link
 						className={styles.link}
-						href='/'>
+						href='/register'>
 						Зарегистрироваться
 					</Link>
 				</Box>
