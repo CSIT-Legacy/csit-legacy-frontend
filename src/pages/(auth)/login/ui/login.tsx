@@ -36,24 +36,28 @@ export function LoginPage() {
 				<Box
 					variant='default'
 					name='Вход'>
-					<div>Почта:</div>
-					<Input
-						state={email}
-						name='login-email'
-						type='email'
-						placeholder='Почта'
-						onBlur={() => setTouchedEmail(true)}
-						variant={showEmailError ? 'error' : 'default'}
-					/>
-					<div>Пароль:</div>
-					<Input
-						state={password}
-						name='login-password'
-						type='password'
-						placeholder='Пароль'
-						onBlur={() => setTouchedPassowrd(true)}
-						variant={showPasswordError ? 'error' : 'default'}
-					/>
+					<div className={styles.field}>
+						<label>Почта:</label>
+						<Input
+							state={email}
+							name='login-email'
+							type='email'
+							placeholder='Почта'
+							onBlur={() => setTouchedEmail(true)}
+							variant={showEmailError ? 'error' : 'default'}
+						/>
+					</div>
+					<div className={styles.field}>
+						<label>Пароль:</label>
+						<Input
+							state={password}
+							name='login-password'
+							type='password'
+							placeholder='Пароль'
+							onBlur={() => setTouchedPassowrd(true)}
+							variant={showPasswordError ? 'error' : 'default'}
+						/>
+					</div>
 					<Button
 						customClassName={styles.button}
 						variant='default'

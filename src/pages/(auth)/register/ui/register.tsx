@@ -44,32 +44,38 @@ export function RegisterPage() {
 				<Box
 					variant='default'
 					name='Регистрация'>
-					<div>Имя:</div>
-					<Input
-						state={username}
-						name='register-username'
-						placeholder='Имя'
-						onBlur={() => setTouchedUsername(true)}
-						variant={showUsernameError ? 'error' : 'default'}
-					/>
-					<div>Почта:</div>
-					<Input
-						state={email}
-						name='register-email'
-						type='email'
-						placeholder='Почта'
-						onBlur={() => setTouchedEmail(true)}
-						variant={showEmailError ? 'error' : 'default'}
-					/>
-					<div>Пароль:</div>
-					<Input
-						state={password}
-						name='register-password'
-						type='password'
-						placeholder='Пароль'
-						onBlur={() => setTouchedPassowrd(true)}
-						variant={showPasswordError ? 'error' : 'default'}
-					/>
+					<div className={styles.field}>
+						<label>Имя:</label>
+						<Input
+							state={username}
+							name='register-username'
+							placeholder='Имя'
+							onBlur={() => setTouchedUsername(true)}
+							variant={showUsernameError ? 'error' : 'default'}
+						/>
+					</div>
+					<div className={styles.field}>
+						<label>Почта:</label>
+						<Input
+							state={email}
+							name='register-email'
+							type='email'
+							placeholder='Почта'
+							onBlur={() => setTouchedEmail(true)}
+							variant={showEmailError ? 'error' : 'default'}
+						/>
+					</div>
+					<div className={styles.field}>
+						<label>Пароль:</label>
+						<Input
+							state={password}
+							name='register-password'
+							type='password'
+							placeholder='Пароль'
+							onBlur={() => setTouchedPassowrd(true)}
+							variant={showPasswordError ? 'error' : 'default'}
+						/>
+					</div>
 					<Button
 						customClassName={styles.button}
 						variant='default'
