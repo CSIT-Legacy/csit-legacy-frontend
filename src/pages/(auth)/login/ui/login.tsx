@@ -8,26 +8,10 @@ import styles from './login.module.scss';
 import Link from 'next/link';
 
 export function LoginPage() {
-	const email = useState<string>('');
-	const password = useState<string>('');
-
-	const [touchedEmail, setTouchedEmail] = useState<boolean>(false);
-	const [touchedPassword, setTouchedPassowrd] = useState<boolean>(false);
-
-	const validateEmail = (emailText: string) => {
-		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		return emailRegex.test(emailText);
-	};
-
-	const validatePassword = (passwordText: string) => {
-		return passwordText.length >= 12;
-	};
-
-	const isValidEmail = validateEmail(email[0]);
-	const isValidPassword = validatePassword(password[0]);
-
-	const showEmailError = touchedEmail && !isValidEmail;
-	const showPasswordError = touchedPassword && !isValidPassword;
+	const [formState, setFormState] = useState({
+		email: '',
+		password: '',
+	});
 
 	return (
 		<div className={styles.container}>
@@ -36,39 +20,36 @@ export function LoginPage() {
 				<Box
 					variant='default'
 					name='Вход'>
-					<div className={styles.field}>
+					<div className={`${styles['field']}`}>
 						<label>Почта:</label>
 						<Input
-							state={email}
+							value={formState.email}
+							handleChange={(newValue) => setFormState({ ...formState, email: newValue })}
 							name='login-email'
 							type='email'
 							placeholder='Почта'
-							onBlur={() => setTouchedEmail(true)}
-							variant={showEmailError ? 'error' : 'default'}
 						/>
 					</div>
-					<div className={styles.field}>
+					<div className={`${styles['field']}`}>
 						<label>Пароль:</label>
 						<Input
-							state={password}
+							value={formState.password}
+							handleChange={(newValue) => setFormState({ ...formState, password: newValue })}
 							name='login-password'
 							type='password'
 							placeholder='Пароль'
-							onBlur={() => setTouchedPassowrd(true)}
-							variant={showPasswordError ? 'error' : 'default'}
 						/>
 					</div>
 					<Button
-						customClassName={styles.button}
+						customClassName={`${styles['button']}`}
 						variant='default'
-						disabled={showEmailError || showPasswordError}
 						onClick={() => {
 							console.log('click');
 						}}>
 						Войти
 					</Button>
 					<Link
-						className={styles.link}
+						className={`${styles['link-to-reg']}`}
 						href='/register'>
 						Зарегистрироваться
 					</Link>
