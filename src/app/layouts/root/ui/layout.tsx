@@ -22,7 +22,9 @@ export function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
+		<html
+			lang='en'
+			suppressHydrationWarning>
 			<body className={`${determinationSans.className}`}>{children}</body>
 		</html>
 	);

@@ -7,7 +7,7 @@ export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
 	checked?: boolean;
 	label?: string;
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
-	customClassName?: string
+	customClassName?: string;
 }
 
 export function Checkbox({ checked, label, variant, customClassName, ...props }: CheckboxProps) {

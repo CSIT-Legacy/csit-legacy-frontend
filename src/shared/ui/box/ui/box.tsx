@@ -6,8 +6,8 @@ import styles from './box.module.scss';
 export interface BoxProps {
 	children?: ReactNode;
 	variant?: 'default' | 'primary' | 'error' | 'success' | 'info' | 'warning';
-	customClassName?: string
-  name?: string
+	customClassName?: string;
+	name?: string;
 }
 
 export function Box({ children, variant, customClassName, name }: BoxProps) {
